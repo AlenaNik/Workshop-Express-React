@@ -10,9 +10,13 @@ class Counter extends Component {
         }));
     };
     render() {
-        return <button
-            className="f6 link dim ph3 pv2 mb2 dib white bg-hot-pink"
-            onClick={this.handleClick}>Sorry, I'm not in the center. Click me: {this.state.count}</button>;
+        return (
+            <div className="tc">
+            <button
+            className="f1 link dim br-pill ph3 pv2 mb2 dib white bg-hot-pink"
+            onClick={this.handleClick}> Click me to start counting: {this.state.count}</button>
+            </div>
+        );
     }
 }
 

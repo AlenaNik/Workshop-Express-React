@@ -19,7 +19,7 @@ const Home = () => {
             params={{
                 "particles": {
                     "number": {
-                        "value": 150,
+                        "value": 1500,
                         "density": {
                             "enable": true,
                             "value_area": 1803.4120608655228
@@ -31,8 +31,8 @@ const Home = () => {
                     "shape": {
                         "type": "circle",
                         "stroke": {
-                            "width": 15,
-                            "color": "#ff7f9c"
+                            "width": 5,
+                            "color": "#fc3ccf"
                         },
                         "polygon": {
                             "nb_sides": 4
@@ -48,7 +48,7 @@ const Home = () => {
                         "random": false,
                         "anim": {
                             "enable": false,
-                            "speed": 1,
+                            "speed": 5,
                             "opacity_min": 0.1,
                             "sync": false
                         }

@@ -20,7 +20,9 @@ class api extends React.Component {
         return (
             <>
                 {this.state.id.map(person => (
-                    <li>{person.name}</li>
+                    <ul className="list pl0 ml0 center mw6 ba b--light-silver br2">
+                    <li className="ph3 pv3 bb b--light-silver">{person.name}</li>
+                    </ul>
                 ))}
             </>
         );
