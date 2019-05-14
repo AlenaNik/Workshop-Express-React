@@ -1,24 +1,29 @@
-import React from 'react';
-import axios from 'axios';
+import React from "react";
+import axios from "axios";
 
 class api extends React.Component {
-    state = {
-        classmate: []
+    constructor(props) {
+        super(props);
+        this.state = {
+            id:[]
+        };
     }
     componentDidMount() {
-        axios.get(`http://localhost:400/api/classmate`)
-            .then(res => {
-                const classmate = res.data;
-                this.setState({classmate});
-            })
+        axios.get("http://localhost:400/api/classmate").then(res => {
+            this.setState({
+                id: res.data
+            });
+        });
     }
 
     render() {
         return (
-            <ul>
-                {this.state.classmate.map(target => <li>{target.name}</li>)}
-            </ul>
-        )
+            <>
+                {this.state.id.map(person => (
+                    <li>{person.name}</li>
+                ))}
+            </>
+        );
     }
 }
 
